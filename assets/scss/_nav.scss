@@ -1,0 +1,29 @@
+@import "variables.scss";
+.navbar-nav{
+    display: flex;
+    margin: 0px 550px 0px 0px;
+    align-content: center;
+    align-items: center;
+}
+
+.bi{
+    margin: 0px 50px 0px 0px;
+}
+
+
+
+
+.nav-link:hover{
+    background-color: rgb(255, 220, 175);
+}
+
+.nav-link{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+   
+}   
+
+.margin{
+    margin: 0px 10px;
+   
+}

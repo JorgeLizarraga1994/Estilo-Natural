@@ -1,0 +1,20 @@
+@import "variables.scss";
+@import "inicio.scss";
+
+header{
+    .form-label{
+        width: 80px;
+    }
+    .formulario{
+        border: solid 1px;
+    }
+    
+    .formulario:hover{
+        background-color:#f0e1ff; 
+    }
+};
+
+
+
+
+

@@ -1,0 +1,29 @@
+@import "variables.scss";
+header{
+    .row h1{
+        @include propiedadesflexcontainer(flex,center);
+        padding-top: 80px;
+        padding-bottom: 60px;
+        color: rgb(0, 0, 0);
+        font-family: 'Poppins', sans-serif;
+    }
+        .img-nosotros{
+            padding-bottom: 100px;
+        }
+            .row p{
+                padding: 0;
+                margin: 5px;
+                font-family: 'Poppins', sans-serif;
+            }
+            
+            .row h5{
+                padding-top: 50px;
+                padding-bottom: 40px;
+            }
+            .row ul{
+                list-style: none;
+            }
+                .row ul li{
+                    padding-bottom: 15px;
+                }
+}

@@ -1,0 +1,331 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.botonsegundo {
+  background-color: violet;
+  margin: 0px 20px;
+}
+
+.body_index {
+  background: url(../img/sabri-98.jpg) no-repeat center center/cover;
+  width: 100%;
+  height: 750px;
+}
+.body_index .btn:hover, .body_index .botonsegundo:hover {
+  background-color: #f0e1ff;
+}
+.body_index .container {
+  display: flex;
+  justify-content: center;
+}
+.body_index .filmotion {
+  margin-top: 250px;
+}
+.body_index .margin-button {
+  padding: 0px 0px 300px 0px;
+}
+
+.container h6 {
+  margin: 200px 0px 0px 0px;
+  padding: 20px;
+  color: white;
+  font-family: arial;
+  text-align: center;
+  background-color: rgb(175, 117, 172);
+  border-radius: 50px;
+}
+
+.botonsegundo {
+  background-color: violet;
+  margin: 0px 20px;
+}
+
+body .container-fluid .bg-black {
+  padding: 10px 0px 0px 0px;
+}
+
+header .img {
+  border-radius: 300px;
+}
+
+main .row img {
+  width: 100%;
+  vertical-align: top;
+  object-fit: cover;
+}
+main .img-fluid {
+  border-radius: 100px;
+  margin: 5px 0px;
+}
+main .row > a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+main .row a:hover img {
+  filter: blur(2px);
+}
+main .light-box {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  align-items: center;
+  transform: scale(0);
+}
+main .next {
+  display: block;
+  background-color: #f0e1ff;
+  color: rgb(0, 0, 0);
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-decoration: none;
+  text-align: center;
+}
+main .light-box img {
+  width: 75vw;
+  max-height: 90vh;
+}
+main .close {
+  display: block;
+  position: absolute;
+  top: 90px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+  background-color: #f0e1ff;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+}
+
+.light-box:target {
+  transform: scale(1);
+}
+
+.botonsegundo {
+  background-color: violet;
+  margin: 0px 20px;
+}
+
+header .row h1 {
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  color: rgb(0, 0, 0);
+  font-family: "Poppins", sans-serif;
+}
+header .img-nosotros {
+  padding-bottom: 100px;
+}
+header .row p {
+  padding: 0;
+  margin: 5px;
+  font-family: "Poppins", sans-serif;
+}
+header .row h5 {
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+header .row ul {
+  list-style: none;
+}
+header .row ul li {
+  padding-bottom: 15px;
+}
+
+.botonsegundo {
+  background-color: violet;
+  margin: 0px 20px;
+}
+
+.botonsegundo {
+  background-color: violet;
+  margin: 0px 20px;
+}
+
+.body_index {
+  background: url(../img/sabri-98.jpg) no-repeat center center/cover;
+  width: 100%;
+  height: 750px;
+}
+.body_index .btn:hover, .body_index .botonsegundo:hover {
+  background-color: #f0e1ff;
+}
+.body_index .container {
+  display: flex;
+  justify-content: center;
+}
+.body_index .filmotion {
+  margin-top: 250px;
+}
+.body_index .margin-button {
+  padding: 0px 0px 300px 0px;
+}
+
+.container h6 {
+  margin: 200px 0px 0px 0px;
+  padding: 20px;
+  color: white;
+  font-family: arial;
+  text-align: center;
+  background-color: rgb(175, 117, 172);
+  border-radius: 50px;
+}
+
+.botonsegundo {
+  background-color: violet;
+  margin: 0px 20px;
+}
+
+body .container-fluid .bg-black {
+  padding: 10px 0px 0px 0px;
+}
+
+header .img {
+  border-radius: 300px;
+}
+
+main .row img {
+  width: 100%;
+  vertical-align: top;
+  object-fit: cover;
+}
+main .img-fluid {
+  border-radius: 100px;
+  margin: 5px 0px;
+}
+main .row > a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+main .row a:hover img {
+  filter: blur(2px);
+}
+main .light-box {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  align-items: center;
+  transform: scale(0);
+}
+main .next {
+  display: block;
+  background-color: #f0e1ff;
+  color: rgb(0, 0, 0);
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-decoration: none;
+  text-align: center;
+}
+main .light-box img {
+  width: 75vw;
+  max-height: 90vh;
+}
+main .close {
+  display: block;
+  position: absolute;
+  top: 90px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+  background-color: #f0e1ff;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+}
+
+.light-box:target {
+  transform: scale(1);
+}
+
+header .form-label {
+  width: 80px;
+}
+header .formulario {
+  border: solid 1px;
+}
+header .formulario:hover {
+  background-color: #f0e1ff;
+}
+
+.botonsegundo {
+  background-color: violet;
+  margin: 0px 20px;
+}
+
+.navbar-nav {
+  display: flex;
+  margin: 0px 250px 0px 0px;
+  align-content: center;
+  align-items: center;
+}
+
+.nav-link:hover {
+  background-color: rgb(240, 225, 255);
+}
+
+.nav-link {
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+
+.margin {
+  margin: 0px 15px;
+}
+
+@media (max-width: 1220px) {
+  h2 {
+    font-size: 17px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 594px) {
+  h2 {
+    font-size: 10px;
+  }
+  h1 {
+    font-size: 18px;
+  }
+}
+.div-formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.botonsegundo {
+  background-color: violet;
+  margin: 0px 20px;
+}/*# sourceMappingURL=style.css.map */

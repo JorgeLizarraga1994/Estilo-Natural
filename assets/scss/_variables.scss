@@ -1,0 +1,10 @@
+$boton:(
+    color: #f0e1ff,
+);
+
+
+@mixin propiedadesflexcontainer ($display, $justify) {
+    display: $display;
+    justify-content: $justify;
+}
+
