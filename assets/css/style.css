@@ -98,3 +98,23 @@ header .formulario:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+
+.productosCss {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); }
+
+.card {
+  margin: 1rem 1rem 1rem 1rem;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: all 400ms ease; }
+
+.card-js {
+  font-family: 'Assistant', sans-serif;
+  font-size: 15px; }
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 10px 10px 10px; }
+
+.shadow {
+  box-shadow: 0px 0px 15px 0px; }

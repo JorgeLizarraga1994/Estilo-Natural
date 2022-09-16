@@ -12,6 +12,10 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="../assets/css/style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Assistant&family=Oswald:wght@200;300;400&family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+        
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-white bg-white sticky-top">
@@ -40,76 +44,16 @@
                         <li class="nav-item">
                             <a class="nav-link text-black margin" href="../pages/contacto.html">CONTACTO</a>
                         </li>
-                        
                     </ul>
                 </div>    
             </div>
+            <a href="">
+                <i class="bi bi-cart2"></i>
+            </a>
     </nav>   
     <main>
         <div class="separador"></div>
-        <div class="d-flex text justify-content-center">
-            <div class="card p-2 margin-card" style="width: 18rem;">
-                <img src="../assets/img/compras/velas/1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">card title</p>
-                    <a href="#" class="btn btn-warning">AGREGAR AL CARRITO</a>
-                </div>
-            </div>
-            <div class="card p-2 margin-card" style="width: 18rem;">
-                <img src="../assets/img/compras/velas/2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">card title</p>
-                    <a href="#" class="btn btn-warning">AGREGAR AL CARRITO</a>
-                </div>
-            </div><div class="card p-2 margin-card" style="width: 18rem;">
-                <img src="../assets/img/compras/velas/3.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">card title</p>
-                    <a href="#" class="btn btn-warning">AGREGAR AL CARRITO</a>
-                </div>
-            </div><div class="card p-2 margin-card" style="width: 18rem;">
-                <img src="../assets/img/compras/velas/4.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">card title</p>
-                    <a href="#" class="btn btn-warning">AGREGAR AL CARRITO</a>
-                </div>
-            </div>
-        </div>
-        <div class="d-flex justify-content-center">
-            <div class="card p-2 margin-card" style="width: 18rem;">
-                <img src="../assets/img/compras/velas/1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">card title</p>
-                    <a href="#" class="btn btn-warning">AGREGAR AL CARRITO</a>
-                </div>
-            </div><div class="card p-2 margin-card" style="width: 18rem;">
-                <img src="../assets/img/compras/velas/1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text"> card title</p>
-                    <a href="#" class="btn btn-warning">AGREGAR AL CARRITO</a>
-                </div>
-            </div><div class="card p-2 margin-card" style="width: 18rem;">
-                <img src="../assets/img/compras/velas/1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">card title </p>
-                    <a href="#" class="btn btn-warning">AGREGAR AL CARRITO</a>
-                </div>
-            </div><div class="card p-2 margin-card" style="width: 18rem;">
-                <img src="../assets/img/compras/velas/1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">card title</p>
-                    <a href="#" class="btn btn-warning">AGREGAR AL CARRITO</a>
-                </div>
-            </div>
-        </div>
+        <div id="productos" class="productosCss"></div>    
     </main>
     <footer class="bg-dark text-center text-white">
         <div class="container p-4 pb-0">
@@ -125,5 +69,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="../assets/js/compras.js"></script>
 </body>
 </html>
