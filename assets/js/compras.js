@@ -102,5 +102,5 @@ for (let compra of botones) {
 }
 
 botonFinalizarCompra.addEventListener("click", ()=>{
-    alert("gracias por su compra.")                               
+    alert("gracias por su compra")                               
 })
