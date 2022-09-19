@@ -32,7 +32,7 @@ function agregarArrayCarrito(ID){
     }
     
 //FunciónAgregarProductosAlCarrito
-function AgregarAlCarrito(array){ 
+function agregarAlCarrito(array){ 
     modalBody.innerHTML = "";
     array.forEach((productoEnCarrito)=>{
     modalBody.innerHTML += `
@@ -45,11 +45,11 @@ function AgregarAlCarrito(array){
                 </div>    
             </div>`
     })
-    CalculoDelTotal(array)
+    calculoDelTotal(array)
 }    
     
 //Función De Calculo Del Total
-function CalculoDelTotal(array){
+function calculoDelTotal(array){
     let acumulador = 0;
     acumulador = array.reduce((acumulador , carrito)=>{
         return acumulador + carrito.precio
@@ -84,10 +84,10 @@ nuevoProducto.innerHTML = `<div class="d-flex text justify-content-center">
     let btnAgregarAlCarrito = document.getElementById(`agregarAlCarrito${ID.id}`)         
     btnAgregarAlCarrito.addEventListener("click", ()=>{
         agregarArrayCarrito(ID);
-        AgregarAlCarrito(carrito);
+        agregarAlCarrito(carrito);
 
     botonCarrito.addEventListener("click", ()=>{
-        AgregarAlCarrito(carrito);
+        agregarAlCarrito(carrito);
 })            
 })     
 });
