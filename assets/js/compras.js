@@ -8,22 +8,22 @@ let precioTotal = document.getElementById('precioTotal')
 let eliminarProductos = document.getElementsByClassName(`botonEliminar`)
 
 
-const ID1 = new Productos("id1", "HOME SPRAY AMBAR CITRUS BEACH 250ML" , 2700, "../assets/img/compras/ID1.jpg");
-const ID2 = new Productos("id2", "DIFUSOR CRISTAL CLASSIC SWEET VAINILLA" , 2900, "../assets/img/compras/ID2.jpg");
-const ID3 = new Productos("id3", "VELA CRISTAL BLACK CITRUS BEACH 250 GR" , 3300, "../assets/img/compras/ID3.jpg");
-const ID4 = new Productos("id4", "VELA CRISTAL BLACK HOT CHOCOLATE 250 GR" , 3300, "../assets/img/compras/ID4.jpg");
-const ID5 = new Productos("id5", "VELA CRISTAL BLACK SWEET VAINILLA 250 GR" , 3300, "../assets/img/compras/ID5.jpg");
-const ID6 = new Productos("id6", "VELA CRISTAL AMBAR SWEET VAINILLA 250 GR" , 3300, "../assets/img/compras/ID6.jpg");
-const ID7 = new Productos("id7", "DIFUSOR PARA AUTO HOT CHOCOLATE" , 990, "../assets/img/compras/ID7.jpg");
-const ID8 = new Productos("id8", "MANTA MONTREAL AVELLANA 1.4*1" , 7900, "../assets/img/compras/ID8.jpg");
-const ID9 = new Productos("id9", "FLOR CHICA" , 750, "../assets/img/compras/ID9.jpg");
-const ID10 = new Productos("id10", "DIFUSOR CRISTAL CLASSIC SWEET CANELA 200 ML" , 2200, "../assets/img/compras/ID10.jpg");
-const ID11 = new Productos("id11", "BOMBA DE BAÑO VAINILLA" , 990, "../assets/img/compras/ID11.jpg");
-const ID12 = new Productos("id12", "BOMBA DE BAÑO LAVANDA" , 3300, "../assets/img/compras/ID12.jpg");
+const id1 = new Productos("id1", "HOME SPRAY AMBAR CITRUS BEACH 250ML" , 2700, "../assets/img/compras/ID1.jpg");
+const id2 = new Productos("id2", "DIFUSOR CRISTAL CLASSIC SWEET VAINILLA" , 2900, "../assets/img/compras/ID2.jpg");
+const id3 = new Productos("id3", "VELA CRISTAL BLACK CITRUS BEACH 250 GR" , 3300, "../assets/img/compras/ID3.jpg");
+const id4 = new Productos("id4", "VELA CRISTAL BLACK HOT CHOCOLATE 250 GR" , 3300, "../assets/img/compras/ID4.jpg");
+const id5 = new Productos("id5", "VELA CRISTAL BLACK SWEET VAINILLA 250 GR" , 3300, "../assets/img/compras/ID5.jpg");
+const id6 = new Productos("id6", "VELA CRISTAL AMBAR SWEET VAINILLA 250 GR" , 3300, "../assets/img/compras/ID6.jpg");
+const id7 = new Productos("id7", "DIFUSOR PARA AUTO HOT CHOCOLATE" , 990, "../assets/img/compras/ID7.jpg");
+const id8 = new Productos("id8", "MANTA MONTREAL AVELLANA 1.4*1" , 7900, "../assets/img/compras/ID8.jpg");
+const id9 = new Productos("id9", "FLOR CHICA" , 750, "../assets/img/compras/ID9.jpg");
+const id10 = new Productos("id10", "DIFUSOR CRISTAL CLASSIC SWEET CANELA 200 ML" , 2200, "../assets/img/compras/ID10.jpg");
+const id11 = new Productos("id11", "BOMBA DE BAÑO VAINILLA" , 990, "../assets/img/compras/ID11.jpg");
+const id12 = new Productos("id12", "BOMBA DE BAÑO LAVANDA" , 3300, "../assets/img/compras/ID12.jpg");
 
 let carrito = [];
 let producto =[];
-producto.push(ID1, ID2, ID3, ID4, ID5, ID6, ID7, ID8, ID9, ID10, ID11, ID12);
+producto.push(id1, id2, id3, id4, id5, id6, id7, id8, id9, id10, id11, id12);
 
 
 //Función para agregar productos al array carrito
@@ -106,7 +106,7 @@ compra.addEventListener("click", ()=>{
 //Agrego un Sweet Alert para la alerta de "Agregado al carrito".  
 botonFinalizarCompra.addEventListener("click", ()=>{
     Swal.fire({
-        position: 'top-end',
+        position: 'center',
         icon: 'success',
         title: 'Gracias por su compra',
         showConfirmButton: false,
