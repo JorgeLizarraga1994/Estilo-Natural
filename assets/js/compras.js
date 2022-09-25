@@ -5,6 +5,7 @@ let botonCarrito = document.getElementById("botonCarrito")
 let modalBody = document.getElementById("modal-body")
 let botonFinalizarCompra = document.getElementById("botonFinalizarCompra")
 let precioTotal = document.getElementById('precioTotal')
+let eliminarProductos = document.getElementsByClassName(`botonEliminar`)
 
 
 const ID1 = new Productos("id1", "HOME SPRAY AMBAR CITRUS BEACH 250ML" , 2700, "../assets/img/compras/ID1.jpg");
@@ -30,23 +31,25 @@ function agregarArrayCarrito(ID){
     carrito.push(ID)
     console.log(carrito)
     }
-    
+
 //FunciónAgregarProductosAlCarrito
 function agregarAlCarrito(array){ 
     modalBody.innerHTML = "";
     array.forEach((productoEnCarrito)=>{
     modalBody.innerHTML += `
             <div class="card border-primary mb-3" id ="productoCarrito${productoEnCarrito.id}" style="max-width: 540px;">
-                <img class="card-img-top" src="../assets/${productoEnCarrito.imagen}" alt="${productoEnCarrito.nombre}" style="max-width: 300px;">
+                <img class="card-img-top" src="../assets/${productoEnCarrito.imagen}" alt="${productoEnCarrito.nombre}" style="max-width: 100px;">
                 <div class="card-body">
                         <h4 class="card-title">${productoEnCarrito.nombre}</h4>
                         <p class="card-text">$${productoEnCarrito.precio}</p> 
-                        <button class= "btn btn-danger" id="botonEliminar"><i class="fas fa-trash-alt"></i></button>
+                        <button class= "btn btn-danger botonEliminar" id="botonEliminar${productoEnCarrito.id}"><i class="fas fa-trash-alt"></i></button>
                 </div>    
             </div>`
     })
+    
     calculoDelTotal(array)
-}    
+}
+
     
 //Función De Calculo Del Total
 function calculoDelTotal(array){
@@ -54,12 +57,7 @@ function calculoDelTotal(array){
     acumulador = array.reduce((acumulador , carrito)=>{
         return acumulador + carrito.precio
     },0)
-    if(acumulador == 0){
-        precioTotal.innerText = `Carrito vacio`
-    }
-    else{
-        precioTotal.innerText = `El precio total de su compra es : $${acumulador}`
-    }
+    acumulador == 0 ? precioTotal.innerText = `Carrito vacio` : precioTotal.innerText = `El precio total de su compra es : $${acumulador}`
 }    
 
 //APP
@@ -74,7 +72,7 @@ nuevoProducto.innerHTML = `<div class="d-flex text justify-content-center">
                                     <div class="card-body">
                                         <h5 class="card-title card-js">${ID.nombre}</h5>
                                         <p class="card-text">Precio: $${ID.precio}</p>
-                                        <button id="agregarAlCarrito${ID.id}" class="btn btn-warning btnCompra">AGREGAR AL CARRITO</button>
+                                        <button id="agregarAlCarrito${ID.id}" class="btn btn-color btnCompra">AGREGAR AL CARRITO</button>
                                     </div>
                                 </div>
                             </div>`
@@ -85,22 +83,54 @@ nuevoProducto.innerHTML = `<div class="d-flex text justify-content-center">
     btnAgregarAlCarrito.addEventListener("click", ()=>{
         agregarArrayCarrito(ID);
         agregarAlCarrito(carrito);
-
-    botonCarrito.addEventListener("click", ()=>{
-        agregarAlCarrito(carrito);
-})            
 })     
 });
 
 
-
+//Agrego un Toastify para la alerta de "Agregado al carrito".    
 let botones = document.getElementsByClassName("btnCompra");
 for (let compra of botones) {
-    compra.addEventListener("click", ()=>{
-        alert("el producto ha sido agregado al carrito")
-    })
+compra.addEventListener("click", ()=>{
+    Toastify({
+        text: "Agregado al carrito",
+        className: "info",
+        duration: 1000 ,
+        style: {
+          background: "rgb(255, 220, 175)",
+          color: "black"
+        }
+      }).showToast();
+})
 }
 
+//Agrego un Sweet Alert para la alerta de "Agregado al carrito".  
 botonFinalizarCompra.addEventListener("click", ()=>{
-    alert("gracias por su compra")                               
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Gracias por su compra',
+        showConfirmButton: false,
+        timer: 1500
+      })                             
 })
+
+
+//No funciona!
+for (let eliminar of eliminarProductos) {
+    eliminar.addEventListener("click", ()=>{
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Producto Eliminado',
+            showConfirmButton: false,
+            timer: 1500
+          })     
+    })
+    }
+
+
+
+
+
+
+
