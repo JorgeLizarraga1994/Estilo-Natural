@@ -1,39 +1,43 @@
 import { Productos } from "./Producto.js"
 
 //Dom Carrito
-let botonCarrito = document.getElementById("botonCarrito")
 let modalBody = document.getElementById("modal-body")
 let botonFinalizarCompra = document.getElementById("botonFinalizarCompra")
 let precioTotal = document.getElementById('precioTotal')
-let eliminarProductos = document.getElementsByClassName(`botonEliminar`)
 
+const id1 = new Productos(0 , "HOME SPRAY AMBAR CITRUS BEACH 250ML" , 2700, "../assets/img/compras/ID1.jpg");
+const id2 = new Productos(1 , "DIFUSOR CRISTAL CLASSIC SWEET VAINILLA" , 2900, "../assets/img/compras/ID2.jpg");
+const id3 = new Productos(2 , "VELA CRISTAL BLACK CITRUS BEACH 250 GR" , 3300, "../assets/img/compras/ID3.jpg");
+const id4 = new Productos(3 , "VELA CRISTAL BLACK HOT CHOCOLATE 250 GR" , 3300, "../assets/img/compras/ID4.jpg");
+const id5 = new Productos(4 , "VELA CRISTAL BLACK SWEET VAINILLA 250 GR" , 3300, "../assets/img/compras/ID5.jpg");
+const id6 = new Productos(5 , "VELA CRISTAL AMBAR SWEET VAINILLA 250 GR" , 3300, "../assets/img/compras/ID6.jpg");
+const id7 = new Productos(6 , "DIFUSOR PARA AUTO HOT CHOCOLATE" , 990, "../assets/img/compras/ID7.jpg");
+const id8 = new Productos(7 , "MANTA MONTREAL AVELLANA 1.4*1" , 7900, "../assets/img/compras/ID8.jpg");
+const id9 = new Productos(8 , "FLOR CHICA" , 750, "../assets/img/compras/ID9.jpg");
+const id10 = new Productos(9 , "DIFUSOR CRISTAL CLASSIC SWEET CANELA 200 ML" , 2200, "../assets/img/compras/ID10.jpg");
+const id11 = new Productos(10 , "BOMBA DE BAÑO VAINILLA" , 990, "../assets/img/compras/ID11.jpg");
+const id12 = new Productos(11 , "BOMBA DE BAÑO LAVANDA" , 3300, "../assets/img/compras/ID12.jpg");
 
-const id1 = new Productos("id1", "HOME SPRAY AMBAR CITRUS BEACH 250ML" , 2700, "../assets/img/compras/ID1.jpg");
-const id2 = new Productos("id2", "DIFUSOR CRISTAL CLASSIC SWEET VAINILLA" , 2900, "../assets/img/compras/ID2.jpg");
-const id3 = new Productos("id3", "VELA CRISTAL BLACK CITRUS BEACH 250 GR" , 3300, "../assets/img/compras/ID3.jpg");
-const id4 = new Productos("id4", "VELA CRISTAL BLACK HOT CHOCOLATE 250 GR" , 3300, "../assets/img/compras/ID4.jpg");
-const id5 = new Productos("id5", "VELA CRISTAL BLACK SWEET VAINILLA 250 GR" , 3300, "../assets/img/compras/ID5.jpg");
-const id6 = new Productos("id6", "VELA CRISTAL AMBAR SWEET VAINILLA 250 GR" , 3300, "../assets/img/compras/ID6.jpg");
-const id7 = new Productos("id7", "DIFUSOR PARA AUTO HOT CHOCOLATE" , 990, "../assets/img/compras/ID7.jpg");
-const id8 = new Productos("id8", "MANTA MONTREAL AVELLANA 1.4*1" , 7900, "../assets/img/compras/ID8.jpg");
-const id9 = new Productos("id9", "FLOR CHICA" , 750, "../assets/img/compras/ID9.jpg");
-const id10 = new Productos("id10", "DIFUSOR CRISTAL CLASSIC SWEET CANELA 200 ML" , 2200, "../assets/img/compras/ID10.jpg");
-const id11 = new Productos("id11", "BOMBA DE BAÑO VAINILLA" , 990, "../assets/img/compras/ID11.jpg");
-const id12 = new Productos("id12", "BOMBA DE BAÑO LAVANDA" , 3300, "../assets/img/compras/ID12.jpg");
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+if(localStorage.getItem("carrito")){
+    carrito = JSON.parse(localStorage.getItem("carrito"))
+    agregarProductosAlCarrito(carrito)
+}
+else{
+    carrito = [];
+}
 
-let carrito = [];
 let producto =[];
 producto.push(id1, id2, id3, id4, id5, id6, id7, id8, id9, id10, id11, id12);
 
-
 //Función para agregar productos al array carrito
-function agregarArrayCarrito(ID){
-    carrito.push(ID)
-    console.log(carrito)
-    }
+function agregarArrayCarrito(id){
+    carrito.push(id)
+    localStorage.setItem("carrito" , JSON.stringify(carrito))
+}
 
-//FunciónAgregarProductosAlCarrito
-function agregarAlCarrito(array){ 
+//Función AgregarProductosAlCarrito
+function agregarProductosAlCarrito(array){ 
     modalBody.innerHTML = "";
     array.forEach((productoEnCarrito)=>{
     modalBody.innerHTML += `
@@ -42,27 +46,68 @@ function agregarAlCarrito(array){
                 <div class="card-body">
                         <h4 class="card-title">${productoEnCarrito.nombre}</h4>
                         <p class="card-text">$${productoEnCarrito.precio}</p> 
-                        <button class= "btn btn-danger botonEliminar" id="botonEliminar${productoEnCarrito.id}"><i class="fas fa-trash-alt"></i></button>
+                        <button id="eliminarProductos${productoEnCarrito.id}"  class= "btn btn-danger" ><i class="fas fa-trash-alt"></i></button>
                 </div>    
             </div>`
+            
+    eliminarProductosDelCarrito(productoEnCarrito.id, array);
     })
-    
-    calculoDelTotal(array)
+    calculoDelTotal(array);
 }
 
-    
+//Función EliminarProductosDelCarrito
+function eliminarProductosDelCarrito(productoEnCarritoid, array){
+        let eliminarProductos = document.getElementById(`eliminarProductos${productoEnCarritoid}`)
+            let id = productoEnCarritoid
+
+            eliminarProductos.addEventListener("click", ()=>{
+            let productosIndex = array.findIndex(element => element.id == id)
+            console.log(productosIndex);
+            array.splice(productosIndex ,1)
+            localStorage.setItem("carrito", JSON.stringify(array))
+            agregarProductosAlCarrito(array)
+            })
+            
+}               
+            
 //Función De Calculo Del Total
 function calculoDelTotal(array){
     let acumulador = 0;
-    acumulador = array.reduce((acumulador , carrito)=>{
-        return acumulador + carrito.precio
+    acumulador = array.reduce((acumulador , array)=>{
+        return acumulador + array.precio
     },0)
-    acumulador == 0 ? precioTotal.innerText = `Carrito vacio` : precioTotal.innerText = `El precio total de su compra es : $${acumulador}`
-}    
+    //Utilizo un operador ternario    
+    acumulador == 0 ? precioTotal.innerText = `Carrito vacio`  : precioTotal.innerText = `El precio total de su compra es : $${acumulador}`
+}
+
+//Swal para la alerta de "Gracias por su compra".
+function swalCompra(){
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Gracias por su compra',
+        showConfirmButton: false,
+        timer: 1500
+      })   
+}
+
+//Toastify para la alerta de "Gracias por su compra".
+function toastifyAgregadoCarrito(){
+Toastify({
+    text: "Agregado al carrito",
+    className: "info",
+    duration: 1000 ,
+    style: {
+      background: "rgb(255, 220, 175)",
+      color: "black"
+    }
+  }).showToast();
+}
 
 //APP
 // 1- Capturar el id "productos" y lo almacenamos en divProductos
 let divProductos = document.getElementById("productos")
+
 // 2 - Recorremos el array producto creando un elemento div que contenga otro div mediante innerHTML.
 producto.forEach((ID) => {
 let nuevoProducto = document.createElement("div")
@@ -75,62 +120,34 @@ nuevoProducto.innerHTML = `<div class="d-flex text justify-content-center">
                                         <button id="agregarAlCarrito${ID.id}" class="btn btn-color btnCompra">AGREGAR AL CARRITO</button>
                                     </div>
                                 </div>
-                            </div>`
+                            </div>`                         
     divProductos.append(nuevoProducto)
+    
     /* 3 - Capturamos el id "agregarAlCarrito${ID.id}" que se encuentra en el boton de AGREGAR AL CARRITO, para luego
-    a traves del addEventListener asignarle la funcionalidad de agregar producto al carrito  */
+    a traves del addEventListener asignarle la funcionalidad de agregar producto al carrito y luego poder borrarlo si es necesario  */
     let btnAgregarAlCarrito = document.getElementById(`agregarAlCarrito${ID.id}`)         
     btnAgregarAlCarrito.addEventListener("click", ()=>{
         agregarArrayCarrito(ID);
-        agregarAlCarrito(carrito);
-})     
+        agregarProductosAlCarrito(carrito);
+})  
 });
 
-
-//Agrego un Toastify para la alerta de "Agregado al carrito".    
+    
 let botones = document.getElementsByClassName("btnCompra");
 for (let compra of botones) {
 compra.addEventListener("click", ()=>{
-    Toastify({
-        text: "Agregado al carrito",
-        className: "info",
-        duration: 1000 ,
-        style: {
-          background: "rgb(255, 220, 175)",
-          color: "black"
-        }
-      }).showToast();
+    toastifyAgregadoCarrito();    
 })
 }
-
-//Agrego un Sweet Alert para la alerta de "Agregado al carrito".  
+  
 botonFinalizarCompra.addEventListener("click", ()=>{
-    Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: 'Gracias por su compra',
-        showConfirmButton: false,
-        timer: 1500
-      })                             
+    swalCompra();                        
 })
 
 
-//No funciona!
-for (let eliminar of eliminarProductos) {
-    eliminar.addEventListener("click", ()=>{
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Producto Eliminado',
-            showConfirmButton: false,
-            timer: 1500
-          })     
-    })
-    }
 
 
+    
 
-
-
-
-
+    
+ 
