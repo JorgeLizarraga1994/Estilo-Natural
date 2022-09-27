@@ -19,13 +19,6 @@ const id11 = new Productos(10 , "BOMBA DE BAÑO VAINILLA" , 990, "../assets/img/
 const id12 = new Productos(11 , "BOMBA DE BAÑO LAVANDA" , 3300, "../assets/img/compras/ID12.jpg");
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-if(localStorage.getItem("carrito")){
-    carrito = JSON.parse(localStorage.getItem("carrito"))
-    agregarProductosAlCarrito(carrito)
-}
-else{
-    carrito = [];
-}
 
 let producto =[];
 producto.push(id1, id2, id3, id4, id5, id6, id7, id8, id9, id10, id11, id12);
