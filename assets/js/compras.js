@@ -8,9 +8,9 @@ class Productos{
 }
 
 //Dom Carrito
-let modalBody = document.getElementById("modal-body")
-let botonFinalizarCompra = document.getElementById("botonFinalizarCompra")
-let precioTotal = document.getElementById('precioTotal')
+
+
+
 
 /* const id1 = new Productos(0 , "HOME SPRAY AMBAR CITRUS BEACH 250ML" , 2700, "../assets/img/compras/ID1.jpg");
 const id2 = new Productos(1 , "DIFUSOR CRISTAL CLASSIC SWEET VAINILLA" , 2900, "../assets/img/compras/ID2.jpg");
@@ -28,8 +28,8 @@ const id12 = new Productos(11 , "BOMBA DE BAÑO LAVANDA" , 3300, "../assets/img/
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 let producto =[];
-producto.push(id1, id2, id3, id4, id5, id6, id7, id8, id9, id10, id11, id12);
- */
+producto.push(id1, id2, id3, id4, id5, id6, id7, id8, id9, id10, id11, id12); */
+
 
 
 
@@ -42,10 +42,11 @@ function agregarArrayCarrito(id){
 
 //Función AgregarProductosAlCarrito
 function agregarProductosAlCarrito(array){ 
+    let modalBody = document.getElementById("modal-body")
     modalBody.innerHTML = "";
     array.forEach((productoEnCarrito)=>{
     modalBody.innerHTML += `
-            <div class="card border-primary mb-3" id ="productoCarrito${productoEnCarrito.id}" style="max-width: 540px;">
+            <div class="card border-primary mb-3" id="productoCarrito${productoEnCarrito.id}" style="max-width: 540px;">
                 <img class="card-img-top" src="../assets/${productoEnCarrito.imagen}" alt="${productoEnCarrito.nombre}" style="max-width: 100px;">
                 <div class="card-body">
                         <h4 class="card-title">${productoEnCarrito.nombre}</h4>
@@ -53,8 +54,10 @@ function agregarProductosAlCarrito(array){
                         <button id="eliminarProductos${productoEnCarrito.id}"  class= "btn btn-danger" ><i class="fas fa-trash-alt"></i></button>
                 </div>    
             </div>`
-            
-    eliminarProductosDelCarrito(productoEnCarrito.id, array);
+           
+        })
+        array.forEach(productoEnCarrito=>{
+            eliminarProductosDelCarrito(productoEnCarrito.id, array);
     })
     calculoDelTotal(array);
 }
@@ -63,7 +66,6 @@ function agregarProductosAlCarrito(array){
 function eliminarProductosDelCarrito(productoEnCarritoid, array){
         let eliminarProductos = document.getElementById(`eliminarProductos${productoEnCarritoid}`)
             let id = productoEnCarritoid
-
             eliminarProductos.addEventListener("click", ()=>{
             let productosIndex = array.findIndex(element => element.id == id)
             console.log(productosIndex);
@@ -71,7 +73,8 @@ function eliminarProductosDelCarrito(productoEnCarritoid, array){
             localStorage.setItem("carrito", JSON.stringify(array))
             agregarProductosAlCarrito(array)
             })
-}               
+            
+}           
             
 //Función De Calculo Del Total
 function calculoDelTotal(array){
@@ -143,7 +146,8 @@ compra.addEventListener("click", ()=>{
     toastifyAgregadoCarrito();    
 })
 }
-  
+
+let botonFinalizarCompra = document.getElementById("botonFinalizarCompra")  
 botonFinalizarCompra.addEventListener("click", ()=>{
     swalCompra();                        
 })

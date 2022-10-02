@@ -9,9 +9,18 @@ const cargarProductos = async() =>{
         let productoNuevo = new Productos(prod.id, prod.nombre, prod.precio , prod.imagen)
         producto.push(productoNuevo)
     }
-    console.log(producto)
+    localStorage.setItem("producto", JSON.stringify(producto) )
 }
 
 //Utilizo el OR ||
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-cargarProductos()
+
+if(localStorage.getItem("producto")){
+    producto = JSON.parse(localStorage.getItem("producto"))
+}
+else{
+    console.log("Seteando por primera vez el array")
+    //Invoco la function async
+    cargarProductos()
+}
+console.log(producto)
