@@ -1,0 +1,75 @@
+[
+    {
+        "id" : 0 ,
+        "nombre" : "HOME SPRAY AMBAR CITRUS BEACH 250ML" ,
+        "precio" : 2700 , 
+        "imagen" : "../assets/img/compras/ID1.jpg" 
+    },
+    
+    {
+        "id" : 1,
+        "nombre" : "DIFUSOR CRISTAL CLASSIC SWEET VAINILLA" ,
+        "precio" : 2900 , 
+        "imagen" : "../assets/img/compras/ID2.jpg" 
+    },
+    {
+        "id" : 2,
+        "nombre" : "VELA CRISTAL BLACK CITRUS BEACH 250 GR" ,
+        "precio" : 3300 , 
+        "imagen" : "../assets/img/compras/ID3.jpg" 
+    },
+    {
+        "id" : 3,
+        "nombre" : "VELA CRISTAL BLACK HOT CHOCOLATE 250 GR" ,
+        "precio" : 3300 , 
+        "imagen" : "../assets/img/compras/ID4.jpg" 
+    },
+    {
+        "id" : 4,
+        "nombre" : "VELA CRISTAL BLACK SWEET VAINILLA 250 GR" ,
+        "precio" : 3300 , 
+        "imagen" : "../assets/img/compras/ID5.jpg" 
+    },
+    {
+        "id" : 5,
+        "nombre" : "VELA CRISTAL AMBAR SWEET VAINILLA 250 GR" ,
+        "precio" : 3300 , 
+        "imagen" : "../assets/img/compras/ID6.jpg" 
+    },
+    {
+        "id" : 6,
+        "nombre" : "DIFUSOR PARA AUTO HOT CHOCOLATE" ,
+        "precio" : 990 , 
+        "imagen" : "../assets/img/compras/ID7.jpg" 
+    },
+    {
+        "id" : 7,
+        "nombre" : "MANTA MONTREAL AVELLANA 1.4*1" ,
+        "precio" : 7900 , 
+        "imagen" : "../assets/img/compras/ID8.jpg" 
+    },
+    {
+        "id" : 8,
+        "nombre" : "FLOR CHICA" ,
+        "precio" : 750 , 
+        "imagen" : "../assets/img/compras/ID9.jpg" 
+    },
+    {
+        "id" : 9,
+        "nombre" : "DIFUSOR CRISTAL CLASSIC SWEET CANELA 200 ML" ,
+        "precio" : 2200 , 
+        "imagen" : "../assets/img/compras/ID10.jpg" 
+    },
+    {
+        "id" : 10,
+        "nombre" : "BOMBA DE BAÑO VAINILLA",
+        "precio" : 990 , 
+        "imagen" : "../assets/img/compras/ID11.jpg" 
+    },
+    {
+        "id" : 11,
+        "nombre" : "BOMBA DE BAÑO LAVANDA" ,
+        "precio" : 3300 , 
+        "imagen" : "../assets/img/compras/ID12.jpg" 
+    }
+]

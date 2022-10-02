@@ -59,27 +59,27 @@
             <div class="container">
                 <div class="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 mx-auto d-flex justify-content-center flex-column">
                 <h3 class="text-center pt-4">Contactanos</h3>
-                <form role="form" id="contact-form" method="post" autocomplete="off">
+                <form id="form" class="form" action="https://formspree.io/f/mwkzbllv" method="POST">
                     <div class="card-body">
                     <div class="row">
                         <div class="ps-2">
                             <div class="input-group input-group-dynamic pt-4 ">
                                 <label class="form-label">Nombre</label>
-                                <input class="form-control" placeholder="Ingrese su nombre" aria-label="First Name..." type="text" >
+                                <input name="nombre" class="form-control" placeholder="Ingrese su nombre" aria-label="First Name..." type="text" >
                             </div>
                             <div>
                                 <div class="input-group input-group-dynamic pt-4">
                                     <label class="form-label">Apellido</label>
-                                    <input type="text" class="form-control" placeholder="Ingrese su apellido" aria-label="Last Name..." >
+                                    <input name="apellido" type="text" class="form-control" placeholder="Ingrese su apellido" aria-label="Last Name..." >
                                 </div>
                             </div>     
                             <div class="input-group input-group-dynamic pt-4">
                                 <label class="form-label">Email</label>
-                                <input type="email" placeholder="Ingrese su Email" class="form-control">
+                                <input name="email" type="email" placeholder="Ingrese su Email" class="form-control">
                             </div>
                             <div class="input-group input-group-dynamic pt-4">
                                 <label class="form-label">Telefono</label>
-                                <input type="number" placeholder="Ingrese su telefono" class="form-control">
+                                <input name="numero" type="number" placeholder="Ingrese su telefono" class="form-control">
                             </div>
                             <br>
                             <div class="input-group input-group-static">
@@ -87,7 +87,7 @@
                                 <textarea name="message" class="form-control" id="message" rows="6"></textarea>
                             </div>
                             <div class="pt-5 pb-5">
-                            <button href="../pages/contacto.html" class="btn w-100 ms-1 mb-0 formulario" id="sendMessage">Enviar mensaje</button>
+                            <button href="../pages/contacto.html" type="submit" class="btn w-100 ms-1 mb-0 formulario" id="sendMessage">Enviar mensaje</button>
                             </div>
                         </div>
                     </div>
@@ -125,6 +125,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="../assets/js/compras.js" type="module"></script>
+    <!-- <script src="../assets/js/email.js"></script> -->
+    <script>
+        const form = document.querySelector("form")
+
+form.addEventListener("submit", handleSubmit)
+
+async function handleSubmit(event){
+    event.preventDefault()
+    const form = new FormData(this)
+    const response = await fetch(this.action, {
+        mothod : this.method,
+        body: form,
+        headers: {
+            'accept': 'application/json'
+        }
+    })
+    if (response.ok) {
+        this.reset()
+        alert('gracias por contactarme')
+    }
+}
+    </script>
 </body>
 </html>

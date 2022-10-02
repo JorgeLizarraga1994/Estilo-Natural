@@ -1,11 +1,18 @@
-import { Productos } from "./Producto.js"
+class Productos{
+    constructor(id,nombre,precio, imagen){
+        this.id = id,
+        this.nombre = nombre , 
+        this.precio = precio ,
+        this.imagen = imagen
+    }
+}
 
 //Dom Carrito
 let modalBody = document.getElementById("modal-body")
 let botonFinalizarCompra = document.getElementById("botonFinalizarCompra")
 let precioTotal = document.getElementById('precioTotal')
 
-const id1 = new Productos(0 , "HOME SPRAY AMBAR CITRUS BEACH 250ML" , 2700, "../assets/img/compras/ID1.jpg");
+/* const id1 = new Productos(0 , "HOME SPRAY AMBAR CITRUS BEACH 250ML" , 2700, "../assets/img/compras/ID1.jpg");
 const id2 = new Productos(1 , "DIFUSOR CRISTAL CLASSIC SWEET VAINILLA" , 2900, "../assets/img/compras/ID2.jpg");
 const id3 = new Productos(2 , "VELA CRISTAL BLACK CITRUS BEACH 250 GR" , 3300, "../assets/img/compras/ID3.jpg");
 const id4 = new Productos(3 , "VELA CRISTAL BLACK HOT CHOCOLATE 250 GR" , 3300, "../assets/img/compras/ID4.jpg");
@@ -22,6 +29,10 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 let producto =[];
 producto.push(id1, id2, id3, id4, id5, id6, id7, id8, id9, id10, id11, id12);
+ */
+
+
+
 
 //Función para agregar productos al array carrito
 function agregarArrayCarrito(id){
@@ -60,7 +71,6 @@ function eliminarProductosDelCarrito(productoEnCarritoid, array){
             localStorage.setItem("carrito", JSON.stringify(array))
             agregarProductosAlCarrito(array)
             })
-            
 }               
             
 //Función De Calculo Del Total
@@ -69,7 +79,7 @@ function calculoDelTotal(array){
     acumulador = array.reduce((acumulador , array)=>{
         return acumulador + array.precio
     },0)
-    //Utilizo un operador ternario    
+    //Utilizo el operador ternario    
     acumulador == 0 ? precioTotal.innerText = `Carrito vacio`  : precioTotal.innerText = `El precio total de su compra es : $${acumulador}`
 }
 
@@ -103,18 +113,19 @@ let divProductos = document.getElementById("productos")
 
 // 2 - Recorremos el array producto creando un elemento div que contenga otro div mediante innerHTML.
 producto.forEach((ID) => {
-let nuevoProducto = document.createElement("div")
-nuevoProducto.innerHTML = `<div class="d-flex text justify-content-center">
-                                <div class="card p-2 margin-card" style="width: 18rem;">
-                                    <img src="${ID.imagen}" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title card-js">${ID.nombre}</h5>
-                                        <p class="card-text">Precio: $${ID.precio}</p>
-                                        <button id="agregarAlCarrito${ID.id}" class="btn btn-color btnCompra">AGREGAR AL CARRITO</button>
+    let nuevoProducto = document.createElement("div")
+    nuevoProducto.innerHTML = `<div class="d-flex text justify-content-center">
+                                    <div class="card p-2 margin-card" style="width: 18rem;">
+                                        <img src="${ID.imagen}" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title card-js">${ID.nombre}</h5>
+                                            <p class="card-text">Precio: $${ID.precio}</p>
+                                            <button id="agregarAlCarrito${ID.id}" class="btn btn-color btnCompra">AGREGAR AL CARRITO</button>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>`                         
-    divProductos.append(nuevoProducto)
+                                </div>` 
+                                                      
+        divProductos.append(nuevoProducto)
     
     /* 3 - Capturamos el id "agregarAlCarrito${ID.id}" que se encuentra en el boton de AGREGAR AL CARRITO, para luego
     a traves del addEventListener asignarle la funcionalidad de agregar producto al carrito y luego poder borrarlo si es necesario  */
