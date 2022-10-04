@@ -7,31 +7,6 @@ class Productos{
     }
 }
 
-//Dom Carrito
-
-
-
-
-/* const id1 = new Productos(0 , "HOME SPRAY AMBAR CITRUS BEACH 250ML" , 2700, "../assets/img/compras/ID1.jpg");
-const id2 = new Productos(1 , "DIFUSOR CRISTAL CLASSIC SWEET VAINILLA" , 2900, "../assets/img/compras/ID2.jpg");
-const id3 = new Productos(2 , "VELA CRISTAL BLACK CITRUS BEACH 250 GR" , 3300, "../assets/img/compras/ID3.jpg");
-const id4 = new Productos(3 , "VELA CRISTAL BLACK HOT CHOCOLATE 250 GR" , 3300, "../assets/img/compras/ID4.jpg");
-const id5 = new Productos(4 , "VELA CRISTAL BLACK SWEET VAINILLA 250 GR" , 3300, "../assets/img/compras/ID5.jpg");
-const id6 = new Productos(5 , "VELA CRISTAL AMBAR SWEET VAINILLA 250 GR" , 3300, "../assets/img/compras/ID6.jpg");
-const id7 = new Productos(6 , "DIFUSOR PARA AUTO HOT CHOCOLATE" , 990, "../assets/img/compras/ID7.jpg");
-const id8 = new Productos(7 , "MANTA MONTREAL AVELLANA 1.4*1" , 7900, "../assets/img/compras/ID8.jpg");
-const id9 = new Productos(8 , "FLOR CHICA" , 750, "../assets/img/compras/ID9.jpg");
-const id10 = new Productos(9 , "DIFUSOR CRISTAL CLASSIC SWEET CANELA 200 ML" , 2200, "../assets/img/compras/ID10.jpg");
-const id11 = new Productos(10 , "BOMBA DE BAÑO VAINILLA" , 990, "../assets/img/compras/ID11.jpg");
-const id12 = new Productos(11 , "BOMBA DE BAÑO LAVANDA" , 3300, "../assets/img/compras/ID12.jpg");
-
-let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
-let producto =[];
-producto.push(id1, id2, id3, id4, id5, id6, id7, id8, id9, id10, id11, id12); */
-
-
-
 
 
 //Función para agregar productos al array carrito
