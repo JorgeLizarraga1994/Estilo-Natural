@@ -1,6 +1,15 @@
+class Productos{
+    constructor(id,nombre,precio, imagen){
+        this.id = id,
+        this.nombre = nombre , 
+        this.precio = precio ,
+        this.imagen = imagen
+    }
+}
+
 let producto = [];
 const cargarProductos = async() =>{
-    const response = await fetch("/productos.json")
+    const response = await fetch("../productos.json")
     const data = await response.json()
     console.log(data)
     console.log(producto)
@@ -12,8 +21,6 @@ const cargarProductos = async() =>{
     localStorage.setItem("producto", JSON.stringify(producto) )
 }
 
-//Utilizo el OR ||
-let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 if(localStorage.getItem("producto")){
     producto = JSON.parse(localStorage.getItem("producto"))

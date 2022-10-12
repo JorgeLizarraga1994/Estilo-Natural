@@ -1,13 +1,15 @@
-class Productos{
-    constructor(id,nombre,precio, imagen){
-        this.id = id,
-        this.nombre = nombre , 
-        this.precio = precio ,
-        this.imagen = imagen
-    }
+
+
+//Utilizo el OR ||
+
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+if(localStorage.getItem("carrito")){
+    carrito = JSON.parse(localStorage.getItem("carrito"))
+    agregarProductosAlCarrito(carrito)
 }
-
-
+else{
+    carrito = [];
+}
 
 //Función para agregar productos al array carrito
 function agregarArrayCarrito(id){
