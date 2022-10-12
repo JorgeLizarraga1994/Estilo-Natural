@@ -11,8 +11,6 @@ let producto = [];
 const cargarProductos = async() =>{
     const response = await fetch("../productos.json")
     const data = await response.json()
-    console.log(data)
-    console.log(producto)
     
     for (let prod of data) {
         let productoNuevo = new Productos(prod.id, prod.nombre, prod.precio , prod.imagen)
