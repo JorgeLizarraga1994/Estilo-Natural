@@ -1,23 +1,66 @@
 @import "variables.scss";
+#body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body{
     .container-fluid .bg-black{
         padding: 10px 0px 0px 0px;
     }
 }
 
-.separador{
-    padding: 50px 0px;
+.container{
+    padding: 60px 0px;
+    width: 90%;
+    max-width: 1500px;
+    margin: auto;
+    overflow: hidden;
     background-color: white;
+}
+.container-cards{
+    padding: 60px 0px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    background-color: white;
+}
+.container-exp{
+    padding: 60px 0px;
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    overflow: hidden;
 }
 
 
-.footer{
-    background: #f7f7f7;
-    width: 100%;
-    height: 70px;
-    line-height: 40px;
-    margin-top: auto;
-    
-    
+.background-color{
+    background-color: rgb(255, 255, 255);
+}
+
+.font1{
+    font-size: 70px;
+}
+.container-box{
+    background-color: black;
+    box-sizing: border-box;
+}
+.cards-css:hover{
+    transform: translateY(-5%)
+}
+
+.wrap{
+    width: 99vw;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: auto;
+    background: linear-gradient(to right, 
+    rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)) , url(../img/img-exp.jpg);
+    background-size: auto;
+    background-position: center;
 }
 

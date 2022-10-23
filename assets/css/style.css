@@ -3,19 +3,61 @@
   margin: 0;
   box-sizing: border-box; }
 
+#body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
 body .container-fluid .bg-black {
   padding: 10px 0px 0px 0px; }
 
-.separador {
-  padding: 50px 0px;
+.container {
+  padding: 60px 0px;
+  width: 90%;
+  max-width: 1500px;
+  margin: auto;
+  overflow: hidden;
   background-color: white; }
 
-.footer {
-  background: #f7f7f7;
+.container-cards {
+  padding: 60px 0px;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  background-color: white; }
+
+.container-exp {
+  padding: 60px 0px;
   width: 100%;
-  height: 70px;
-  line-height: 40px;
-  margin-top: auto; }
+  max-width: 1500px;
+  margin: auto;
+  overflow: hidden; }
+
+.background-color {
+  background-color: white; }
+
+.font1 {
+  font-size: 70px; }
+
+.container-box {
+  background-color: black;
+  box-sizing: border-box; }
+
+.cards-css:hover {
+  transform: translateY(-5%); }
+
+.wrap {
+  width: 99vw;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin: auto;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/img-exp.jpg);
+  background-size: auto;
+  background-position: center; }
 
 header .row h1 {
   display: flex;
@@ -43,19 +85,65 @@ header .row ul {
 header .row ul li {
   padding-bottom: 15px; }
 
+.footer_nosotros {
+  position: relative;
+  margin-top: 30%; }
+
+#body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
 body .container-fluid .bg-black {
   padding: 10px 0px 0px 0px; }
 
-.separador {
-  padding: 50px 0px;
+.container {
+  padding: 60px 0px;
+  width: 90%;
+  max-width: 1500px;
+  margin: auto;
+  overflow: hidden;
   background-color: white; }
 
-.footer {
-  background: #f7f7f7;
+.container-cards {
+  padding: 60px 0px;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  background-color: white; }
+
+.container-exp {
+  padding: 60px 0px;
   width: 100%;
-  height: 70px;
-  line-height: 40px;
-  margin-top: auto; }
+  max-width: 1500px;
+  margin: auto;
+  overflow: hidden; }
+
+.background-color {
+  background-color: white; }
+
+.font1 {
+  font-size: 70px; }
+
+.container-box {
+  background-color: black;
+  box-sizing: border-box; }
+
+.cards-css:hover {
+  transform: translateY(-5%); }
+
+.wrap {
+  width: 99vw;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin: auto;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/img-exp.jpg);
+  background-size: auto;
+  background-position: center; }
 
 header .form-label {
   width: 80px; }
@@ -68,7 +156,7 @@ header .formulario:hover {
 
 .navbar-nav {
   display: flex;
-  margin: 0px 550px 0px 0px;
+  margin: 0px 300px 0px 0px;
   align-content: center;
   align-items: center; }
 
@@ -76,18 +164,18 @@ header .formulario:hover {
   margin: 0px 50px 0px 0px; }
 
 .nav-link:hover {
-  background-color: #ffdcaf; }
+  background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%); }
 
 .nav-link {
-  background-color: white;
   border-radius: 10px; }
 
 .margin {
   margin: 0px 10px; }
 
-.shadow {
+.nav-css {
   box-shadow: 0px 0px 15px 0px;
-  height: 100px; }
+  height: 80px;
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); }
 
 @media (max-width: 1220px) {
   h2 {
@@ -132,3 +220,14 @@ header .formulario:hover {
 
 .btn-color {
   background-color: #ffdcaf; }
+
+.modal-content {
+  width: 900px;
+  right: 250px; }
+
+.cardProductosEnCarrito {
+  max-width: 800px; }
+
+.card-img-center {
+  display: flex;
+  border-radius: 20px; }

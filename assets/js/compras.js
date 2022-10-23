@@ -1,14 +1,13 @@
 
-
 //Utilizo el OR ||
-
-let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+let carrito = []
+carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 if(localStorage.getItem("carrito")){
     carrito = JSON.parse(localStorage.getItem("carrito"))
     agregarProductosAlCarrito(carrito)
 }
 else{
-    carrito = [];
+    carrito = []
 }
 
 //Función para agregar productos al array carrito
@@ -17,20 +16,23 @@ function agregarArrayCarrito(id){
     localStorage.setItem("carrito" , JSON.stringify(carrito))
 }
 
+
 //Función AgregarProductosAlCarrito
 function agregarProductosAlCarrito(array){ 
     let modalBody = document.getElementById("modal-body")
     modalBody.innerHTML = "";
     array.forEach((productoEnCarrito)=>{
     modalBody.innerHTML += `
-            <div class="card border-primary mb-3" id="productoCarrito${productoEnCarrito.id}" style="max-width: 540px;">
-                <img class="card-img-top" src="../assets/${productoEnCarrito.imagen}" alt="${productoEnCarrito.nombre}" style="max-width: 100px;">
-                <div class="card-body">
-                        <h4 class="card-title">${productoEnCarrito.nombre}</h4>
-                        <p class="card-text">$${productoEnCarrito.precio}</p> 
-                        <button id="eliminarProductos${productoEnCarrito.id}"  class= "btn btn-danger" ><i class="fas fa-trash-alt"></i></button>
-                </div>    
-            </div>`
+        <div class="card border-primary mb-3 cardProductosEnCarrito" id="productoCarrito${productoEnCarrito.id}">
+            <div class="d-flex">
+                <img class="card-img-center " src="../assets/${productoEnCarrito.imagen}" alt="${productoEnCarrito.nombre}" style="max-width: 100px; max-height: 100px">
+                <div class="card-body row">
+                        <strong class="card-title col-lg-7 ProductoEnCarritoNombre">${productoEnCarrito.nombre}</strong>
+                        <strong class="card-text ml-5 col-lg-2 ProductoEnCarritoPrecio">$${productoEnCarrito.precio}</strong> 
+                        <button id="eliminarProductos${productoEnCarrito.id}"  class= "btn btn-danger ml-5 left  col-lg-1 ProductoEnCarritoId" ><i class="fas fa-trash-alt"></i></button>
+                </div>  
+            </div>      
+        </div>`
            
         })
         array.forEach(productoEnCarrito=>{
@@ -59,6 +61,7 @@ function calculoDelTotal(array){
     acumulador = array.reduce((acumulador , array)=>{
         return acumulador + array.precio
     },0)
+    console.log(acumulador)
     //Utilizo el operador ternario    
     acumulador == 0 ? precioTotal.innerText = `Carrito vacio`  : precioTotal.innerText = `El precio total de su compra es : $${acumulador}`
 }
@@ -66,7 +69,7 @@ function calculoDelTotal(array){
 //Swal para la alerta de "Gracias por su compra".
 function swalCompra(){
     Swal.fire({
-        position: 'top-end',
+        position: 'center',
         icon: 'success',
         title: 'Gracias por su compra',
         showConfirmButton: false,
@@ -115,8 +118,7 @@ producto.forEach((ID) => {
         agregarProductosAlCarrito(carrito);
 })  
 });
-
-    
+ 
 let botones = document.getElementsByClassName("btnCompra");
 for (let compra of botones) {
 compra.addEventListener("click", ()=>{
@@ -124,10 +126,17 @@ compra.addEventListener("click", ()=>{
 })
 }
 
+//finalizo compra y elimino los productos del carrito
 let botonFinalizarCompra = document.getElementById("botonFinalizarCompra")  
 botonFinalizarCompra.addEventListener("click", ()=>{
-    swalCompra();                        
-})
+    swalCompra();
+    carrito = [],
+    localStorage.removeItem("carrito"),
+    agregarProductosAlCarrito(carrito)
+}
+)
+
+
 
 
 

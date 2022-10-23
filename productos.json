@@ -8,8 +8,8 @@
     
     {
         "id" : 1,
-        "nombre" : "DIFUSOR CRISTAL CLASSIC SWEET VAINILLA" ,
-        "precio" : 2900 , 
+        "nombre" : "DIFUSOR AMBAR COCONUT PASSION 270ML" ,
+        "precio" : 2700 , 
         "imagen" : "../assets/img/compras/ID2.jpg" 
     },
     {
@@ -26,50 +26,98 @@
     },
     {
         "id" : 4,
-        "nombre" : "VELA CRISTAL BLACK SWEET VAINILLA 250 GR" ,
-        "precio" : 3300 , 
+        "nombre" : "VELA PARÍS DELUXE M COCONUT PASSION 200G" ,
+        "precio" : 3900 , 
         "imagen" : "../assets/img/compras/ID5.jpg" 
     },
     {
         "id" : 5,
-        "nombre" : "VELA CRISTAL AMBAR SWEET VAINILLA 250 GR" ,
-        "precio" : 3300 , 
+        "nombre" : "JOYERO OSTRA ATENAS" ,
+        "precio" : 1900 , 
         "imagen" : "../assets/img/compras/ID6.jpg" 
     },
     {
         "id" : 6,
-        "nombre" : "DIFUSOR PARA AUTO HOT CHOCOLATE" ,
-        "precio" : 990 , 
+        "nombre" : "VELA CRISTAL CLASSIC COCONUT PASSION 250GR" ,
+        "precio" : 3400 , 
         "imagen" : "../assets/img/compras/ID7.jpg" 
     },
     {
         "id" : 7,
-        "nombre" : "MANTA MONTREAL AVELLANA 1.4*1" ,
-        "precio" : 7900 , 
+        "nombre" : "FLOR CHICA" ,
+        "precio" : 550 , 
         "imagen" : "../assets/img/compras/ID8.jpg" 
     },
     {
         "id" : 8,
-        "nombre" : "FLOR CHICA" ,
-        "precio" : 750 , 
+        "nombre" : "VELA SIENA SWEET VAINILLA 300GR" ,
+        "precio" : 4900, 
         "imagen" : "../assets/img/compras/ID9.jpg" 
     },
     {
         "id" : 9,
-        "nombre" : "DIFUSOR CRISTAL CLASSIC SWEET CANELA 200 ML" ,
-        "precio" : 2200 , 
+        "nombre" : "VELA CRISTAL WHITE SWEET VAINILLA 250 GR" ,
+        "precio" : 3400 , 
         "imagen" : "../assets/img/compras/ID10.jpg" 
     },
     {
         "id" : 10,
-        "nombre" : "BOMBA DE BAÑO VAINILLA",
-        "precio" : 990 , 
+        "nombre" : "VELA CRISTAL ROSE SWEET VAINILLA 250 GR",
+        "precio" : 3400 , 
         "imagen" : "../assets/img/compras/ID11.jpg" 
     },
     {
         "id" : 11,
-        "nombre" : "BOMBA DE BAÑO LAVANDA" ,
-        "precio" : 3300 , 
+        "nombre" : "VELA CRISTAL CLASSIC SWEET VAINILLA 250 GR" ,
+        "precio" : 3400 , 
         "imagen" : "../assets/img/compras/ID12.jpg" 
+    },
+    {
+        "id" : 12,
+        "nombre" : "PACK BOMBONES SWEET VAINILLA 50 GR" ,
+        "precio" : 1100 , 
+        "imagen" : "../assets/img/compras/ID13.jpg" 
+    },
+    {
+        "id" : 13,
+        "nombre" : "FLORERRO ATENAS" ,
+        "precio" : 5500 , 
+        "imagen" : "../assets/img/compras/ID14.jpg" 
+    },
+    {
+        "id" : 14,
+        "nombre" : "BOMBA DE BAÑO LIMON" ,
+        "precio" :  1100 , 
+        "imagen" : "../assets/img/compras/ID15.jpg" 
+    },
+    {
+        "id" : 15,
+        "nombre" : "VELA CRISTAL CLASSIC SWEET VAINILLA 250 GR" ,
+        "precio" : 3400 , 
+        "imagen" : "../assets/img/compras/ID16.jpg" 
+    },
+    {
+        "id" : 16,
+        "nombre" : "VELA AMBAR WILD FLOWERS 100GR" ,
+        "precio" : 2600 , 
+        "imagen" : "../assets/img/compras/ID17.jpg" 
+    },
+    {
+        "id" : 17,
+        "nombre" : "SALES DE BAÑO CITRUS BEACH 200GR" ,
+        "precio" : 2100 , 
+        "imagen" : "../assets/img/compras/ID18.jpg" 
+    },
+    {
+        "id" : 18,
+        "nombre" : "VELA TOKIO DELUXE CITRUS BEACH 200GR" ,
+        "precio" : 3900 , 
+        "imagen" : "../assets/img/compras/ID19.jpg" 
+    },
+    {
+        "id" : 19,
+        "nombre" : "SET CAFE CAJÚ GRES" ,
+        "precio" : 5900 , 
+        "imagen" : "../assets/img/compras/ID20.jpg" 
     }
 ]
